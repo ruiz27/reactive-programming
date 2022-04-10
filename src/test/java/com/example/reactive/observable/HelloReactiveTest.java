@@ -1,12 +1,10 @@
 package com.example.reactive.observable;
 
-import io.reactivex.Observable;
+
+import io.reactivex.rxjava3.core.Observable;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 class HelloReactiveTest {
