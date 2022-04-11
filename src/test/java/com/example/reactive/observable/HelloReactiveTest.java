@@ -50,6 +50,7 @@ class HelloReactiveTest {
         ).subscribe(mergeStrings::add);
 
         mergeStrings.forEach(System.out::println);
+        assertEquals(6,mergeStrings.size());
     }
 
     @Test
@@ -59,7 +60,8 @@ class HelloReactiveTest {
         Observable.zip(
                 Observable.fromArray(new String[] { "Simple", "Moderate", "Complex" }),
                 Observable.fromArray(new String[] { "Solutions", "Success", "Hierarchy"}),
-                (str1, str2) -> str1 + " " + str2).subscribe(zippedStrings::add);
+                (str1, str2) -> str1 + " " + str2)
+                .subscribe(zippedStrings::add);
 
         zippedStrings.forEach(System.out::println);
 
